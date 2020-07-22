@@ -40,7 +40,7 @@ class ProfilesController extends Controller
             if (request('avatar')){
                 $attributes['avatar']=request('avatar')->store('avatars');
             }
-            if (request('cover')){
+            if (request('cover')!= null){
                 $attributes['cover']=request('cover')->store('covers');
             }
 
