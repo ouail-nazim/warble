@@ -30,6 +30,10 @@ Route::middleware('auth')->group(function (){
     Route::get('/profiles/search','ExploreController@search')->name('search');
     Route::delete('/tweets/{tweet:id}/delete', 'TweetController@delete')->name('delete');
     Route::get('/profiles/{user:username}','ProfilesController@show')->name('profile');
+    Route::get('/messages','MessageController@index')->name('messages');
+    Route::get('/messages/{id}','MessageController@show');
+    Route::post('/messages/send','MessageController@send');
+
 });
 
 

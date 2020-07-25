@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/costum.css') }}" rel="stylesheet">
 
     <link href="/fontawesome/css/all.css" rel="stylesheet">
 </head>
@@ -39,6 +40,13 @@
 
 </div>
     <script src="http://unpkg.com/turbolinks"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
     <script src="{{ asset('js/js.js') }}" defer></script>
+    <script >
+        var myid='{{auth()->id()}}';
+    </script>
+    <script src="{{ asset('js/msg.js') }}" defer></script>
 </body>
 </html>
